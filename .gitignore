@@ -1,0 +1,17 @@
+
+*.sqlite
+*.log
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.toml
+.env
+.DS_Store
+.idea/
+.venv/
+venv/
+.vscode/
+.git/
+.pytest_cache/
+.ruff_cache/

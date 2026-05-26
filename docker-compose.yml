@@ -1,0 +1,35 @@
+services:
+  app:
+    build: .
+    container_name: icomerce-api
+    ports:
+      - "8000:8000"
+    env_file: .env
+    depends_on:
+      db:
+        condition: service_healthy
+    # Create database tables, seed admin and products on startup
+    command: >
+      sh -c "python -m app.create_db && python -m app.create_admin && python -m app.seed_products && uvicorn main:app --host 0.0.0.0 --port 8000"
+    restart: unless-stopped
+
+  db:
+    image: postgres:17-alpine
+    container_name: icomerce-db
+    environment:
+      POSTGRES_USER: icomerce
+      POSTGRES_PASSWORD: icomerce_secret
+      POSTGRES_DB: icomerce_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U icomerce -d icomerce_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  pgdata:
