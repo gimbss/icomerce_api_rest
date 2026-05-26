@@ -313,30 +313,13 @@ O `docker-compose.yml` configura:
 
 ### Variáveis de ambiente para Docker
 
-O `docker-compose.yml` já configura as variáveis padrão. Para personalizar, crie um arquivo `.env`:
-
-```env
-DATABASE_URL=postgresql://ecommerce:ecommerce_secret@db:5432/ecommerce_db
-JWT_SECRET=sua-chave-secreta-aqui
-JWT_EXPIRATION_HOURS=24
-MAIL_BACKEND=smtp
-MAIL_SMTP_HOST=smtp.gmail.com
-MAIL_SMTP_PORT=587
-MAIL_SMTP_TLS=true
-MAIL_USERNAME=your-email@gmail.com
-MAIL_PASSWORD=your-app-password
-MAIL_FROM_NAME=eCommerce
-MAIL_FROM_ADDRESS=noreply@ecommerce.com
-
-# Admin Seed (para criar o primeiro admin via python -m app.create_admin)
-ADMIN_EMAIL=admin@ecommerce.com
-ADMIN_PASSWORD=Admin@1234
-ADMIN_NAME=Admin
-```
+crie um arquivo .env e adicione as variáveis de ambiente presentes em .env.example, alterando par valores reais
 
 ### Rodar localmente com SQLite
 
 Para desenvolvimento local sem Docker:
+
+- no arquvio .env aponte DATABASE_URL=sqlite:///app/database/ecommerce.db
 
 ```bash
 pip install -r requirements.txt
