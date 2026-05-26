@@ -14,8 +14,8 @@ def _console_settings() -> MailSettings:
         smtp_tls=True,
         username="test@test.com",
         password="testpass",
-        from_name="iCommerce",
-        from_address="noreply@icomerce.com",
+        from_name="eCommerce",
+        from_address="noreply@ecommerce.com",
     )
 
 
@@ -27,8 +27,8 @@ def _smtp_settings() -> MailSettings:
         smtp_tls=True,
         username="test@test.com",
         password="testpass",
-        from_name="iCommerce",
-        from_address="noreply@icomerce.com",
+        from_name="eCommerce",
+        from_address="noreply@ecommerce.com",
     )
 
 
@@ -110,4 +110,4 @@ def test_mail_settings_defaults():
     assert settings.backend == "console"  # default
     assert settings.smtp_host == "smtp.gmail.com"  # default
     assert settings.smtp_port == 587  # default
-    assert settings.from_name == "iCommerce"  # default
+    assert settings.from_name == "eCommerce"  # default

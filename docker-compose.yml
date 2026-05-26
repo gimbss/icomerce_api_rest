@@ -1,7 +1,7 @@
 services:
   app:
     build: .
-    container_name: icomerce-api
+    container_name: ecommerce-api
     ports:
       - "8000:8000"
     env_file: .env
@@ -15,17 +15,17 @@ services:
 
   db:
     image: postgres:17-alpine
-    container_name: icomerce-db
+    container_name: ecommerce-db
     environment:
-      POSTGRES_USER: icomerce
-      POSTGRES_PASSWORD: icomerce_secret
-      POSTGRES_DB: icomerce_db
+      POSTGRES_USER: ecommerce
+      POSTGRES_PASSWORD: ecommerce_secret
+      POSTGRES_DB: ecommerce_db
     ports:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U icomerce -d icomerce_db"]
+      test: ["CMD-SHELL", "pg_isready -U ecommerce -d ecommerce_db"]
       interval: 5s
       timeout: 5s
       retries: 5

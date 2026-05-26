@@ -1,10 +1,10 @@
-"""Shared test configuration and fixtures for the iCommerce test suite."""
+"""Shared test configuration and fixtures for the eCommerce test suite."""
 import os
 import pytest
 from fastapi.testclient import TestClient
 
 # Ensure test environment variables are set before importing app modules
-os.environ.setdefault("JWT_SECRET", "icomerce-super-secret-key-change-in-production")
+os.environ.setdefault("JWT_SECRET", "ecommerce-super-secret-key-change-in-production")
 os.environ.setdefault("JWT_EXPIRATION_HOURS", "24")
 os.environ.setdefault("MAIL_BACKEND", "console")
 

@@ -32,6 +32,6 @@ def get_mail_settings() -> MailSettings:
         smtp_tls=os.getenv("MAIL_SMTP_TLS", "true").lower() == "true",
         username=os.getenv("MAIL_USERNAME", ""),
         password=os.getenv("MAIL_PASSWORD", ""),
-        from_name=os.getenv("MAIL_FROM_NAME", "iCommerce"),
-        from_address=os.getenv("MAIL_FROM_ADDRESS", "noreply@icomerce.com"),
+        from_name=os.getenv("MAIL_FROM_NAME", "eCommerce"),
+        from_address=os.getenv("MAIL_FROM_ADDRESS", "noreply@ecommerce.com"),
     )

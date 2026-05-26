@@ -26,16 +26,16 @@ class EmailService:
 
     def send_verification_code(self, to_email: str, code: str) -> None:
         """Send a verification code to the given email address."""
-        subject = "iCommerce — Código de Verificação de Email"
+        subject = "eCommerce — Código de Verificação de Email"
         body = (
             f"Olá!\n\n"
             f"Seu código de verificação é: {code}\n\n"
             f"Este código expira em 15 minutos.\n\n"
             f"Se você não solicitou este código, ignore este email.\n\n"
-            f"— Equipe iCommerce"
+            f"— Equipe eCommerce"
         )
         html_body = (
-            f"<h2>iCommerce — Verificação de Email</h2>"
+            f"<h2>eCommerce — Verificação de Email</h2>"
             f"<p>Olá!</p>"
             f"<p>Seu código de verificação é:</p>"
             f'<p style="font-size:24px;font-weight:bold;letter-spacing:4px;'
@@ -43,7 +43,7 @@ class EmailService:
             f"{code}</p>"
             f"<p>Este código expira em <strong>15 minutos</strong>.</p>"
             f"<p>Se você não solicitou este código, ignore este email.</p>"
-            f"<hr><p style='color:#888;font-size:12px;'>Equipe iCommerce</p>"
+            f"<hr><p style='color:#888;font-size:12px;'>Equipe eCommerce</p>"
         )
         self._send(to_email, subject, body, html_body)
 

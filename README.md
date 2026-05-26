@@ -1,4 +1,4 @@
-# iCommerce API
+# eCommerce API
 
 Uma API RESTful para uma plataforma de e-commerce, construída com FastAPI e SQLAlchemy. O projeto foi pensado para ser direto naquilo que faz, com regras de negócio claras e proteções onde importa.
 
@@ -36,7 +36,7 @@ O primeiro administrador pode ser criado via script CLI:
 
 ```bash
 # Configurar variáveis de ambiente
-export ADMIN_EMAIL=admin@icomerce.com
+export ADMIN_EMAIL=admin@ecommerce.com
 export ADMIN_PASSWORD=Admin@1234
 export ADMIN_NAME=Admin
 
@@ -139,7 +139,7 @@ JWT_SECRET=sua-chave-secreta-aqui
 JWT_EXPIRATION_HOURS=24
 
 # Admin Seed (para criar o primeiro admin via python -m app.create_admin)
-ADMIN_EMAIL=admin@icomerce.com
+ADMIN_EMAIL=admin@ecommerce.com
 ADMIN_PASSWORD=Admin@1234
 ADMIN_NAME=Admin
 
@@ -150,8 +150,8 @@ MAIL_SMTP_PORT=587
 MAIL_SMTP_TLS=true
 MAIL_USERNAME=your-email@gmail.com
 MAIL_PASSWORD=your-app-password
-MAIL_FROM_NAME=iCommerce
-MAIL_FROM_ADDRESS=noreply@icomerce.com
+MAIL_FROM_NAME=eCommerce
+MAIL_FROM_ADDRESS=noreply@ecommerce.com
 ```
 
 ## Como rodar
@@ -316,7 +316,7 @@ O `docker-compose.yml` configura:
 O `docker-compose.yml` já configura as variáveis padrão. Para personalizar, crie um arquivo `.env`:
 
 ```env
-DATABASE_URL=postgresql://icomerce:icomerce_secret@db:5432/icomerce_db
+DATABASE_URL=postgresql://ecommerce:ecommerce_secret@db:5432/ecommerce_db
 JWT_SECRET=sua-chave-secreta-aqui
 JWT_EXPIRATION_HOURS=24
 MAIL_BACKEND=smtp
@@ -325,11 +325,11 @@ MAIL_SMTP_PORT=587
 MAIL_SMTP_TLS=true
 MAIL_USERNAME=your-email@gmail.com
 MAIL_PASSWORD=your-app-password
-MAIL_FROM_NAME=iCommerce
-MAIL_FROM_ADDRESS=noreply@icomerce.com
+MAIL_FROM_NAME=eCommerce
+MAIL_FROM_ADDRESS=noreply@ecommerce.com
 
 # Admin Seed (para criar o primeiro admin via python -m app.create_admin)
-ADMIN_EMAIL=admin@icomerce.com
+ADMIN_EMAIL=admin@ecommerce.com
 ADMIN_PASSWORD=Admin@1234
 ADMIN_NAME=Admin
 ```

@@ -11,8 +11,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = FastAPI(
-    title="iCommerce API",
-    description="RESTful API for the iCommerce e-commerce platform",
+    title="eCommerce API",
+    description="RESTful API for the eCommerce e-commerce platform",
     version="1.0.0",
     swagger_ui_parameters={"persistAuthorization": True},
 )
@@ -32,7 +32,7 @@ app.include_router(order_router, prefix="/api/v1")
 
 @app.get("/", tags=["Health"])
 def root():
-    return {"status": "ok", "service": "iCommerce API", "version": "1.0.0", "message": "API feita em python usando FastAPI para o exercício de e-commerce. Acesse /docs para a documentação interativa. Feito por: Gilberto Neto - 2026."}
+    return {"status": "ok", "service": "eCommerce API", "version": "1.0.0", "message": "API feita em python usando FastAPI para o exercício de e-commerce. Acesse /docs para a documentação interativa. Feito por: Gilberto Neto - 2026."}
 
 
 PUBLIC_PATH_PREFIXES = ("/api/v1/auth/register", "/api/v1/auth/login", "/api/v1/auth/validate", "/api/v1/auth/resend-verification", "/")

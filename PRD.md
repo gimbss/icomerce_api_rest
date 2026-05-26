@@ -1,4 +1,4 @@
-# PRD — iCommerce API
+# PRD — eCommerce API
 
 **Versão:** 2.0  
 **Data:** 25/05/2026  
@@ -8,7 +8,7 @@
 
 ## 1. Visão Geral
 
-A iCommerce API é uma plataforma RESTful de e-commerce construída com **FastAPI + SQLAlchemy + SQLite**, seguindo arquitetura em camadas (Router → Controller → Service/Repository → Model). O sistema gerencia o fluxo completo de um e-commerce: autenticação de usuários, catálogo de produtos e pedidos, com proteções de segurança robustas.
+A eCommerce API é uma plataforma RESTful de e-commerce construída com **FastAPI + SQLAlchemy + SQLite**, seguindo arquitetura em camadas (Router → Controller → Service/Repository → Model). O sistema gerencia o fluxo completo de um e-commerce: autenticação de usuários, catálogo de produtos e pedidos, com proteções de segurança robustas.
 
 ### 1.1 Estado Atual
 
@@ -145,7 +145,7 @@ app/
 
 **Variáveis de ambiente do seed script:**
 ```
-ADMIN_EMAIL=admin@icomerce.com
+ADMIN_EMAIL=admin@ecommerce.com
 ADMIN_PASSWORD=Admin@1234
 ADMIN_NAME=Admin
 ADMIN_ADDRESS=opcional
@@ -287,8 +287,8 @@ MAIL_SMTP_PORT=587
 MAIL_SMTP_TLS=true
 MAIL_USERNAME=your-email@gmail.com
 MAIL_PASSWORD=your-app-password
-MAIL_FROM_NAME=iCommerce
-MAIL_FROM_ADDRESS=noreply@icomerce.com
+MAIL_FROM_NAME=eCommerce
+MAIL_FROM_ADDRESS=noreply@ecommerce.com
 ```
 
 ### 5.2 Migração de Banco
